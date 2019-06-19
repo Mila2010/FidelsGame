@@ -40,15 +40,14 @@
         <scene sceneID="HQ7-0c-Xv0">
             <objects>
                 <viewController storyboardIdentifier="splashScreen" id="ZdT-e8-wrK" customClass="SplashViewController" customModule="FidelsGame" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="s1a-it-JhU">
+                    <view key="view" contentMode="scaleToFill" id="s1a-it-JhU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="FIDEL" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lF1-IK-utV">
-                                <rect key="frame" x="50" y="407.5" width="315" height="81"/>
+                                <rect key="frame" x="50" y="407.5" width="314" height="81"/>
                                 <color key="backgroundColor" red="0.95677477121353149" green="0.41867285966873169" blue="0.084017641842365265" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="315" id="LKR-qJ-QUu"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="315" id="cLJ-8Y-gQe"/>
                                     <constraint firstAttribute="height" constant="81" id="ckm-wx-Drq"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="158" id="ilz-ht-aLk"/>
@@ -62,9 +61,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95677477121353149" green="0.41867285966873169" blue="0.084017641842365265" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lF1-IK-utV" firstAttribute="centerX" secondItem="s1a-it-JhU" secondAttribute="centerX" id="c20-FM-Hsy"/>
+                            <constraint firstItem="lF1-IK-utV" firstAttribute="leading" secondItem="rAC-9S-zDg" secondAttribute="leading" constant="50" id="3nN-v9-e0K"/>
                             <constraint firstItem="lF1-IK-utV" firstAttribute="centerY" secondItem="s1a-it-JhU" secondAttribute="centerY" id="cA4-9F-UUq"/>
-                            <constraint firstItem="lF1-IK-utV" firstAttribute="leading" secondItem="rAC-9S-zDg" secondAttribute="leading" constant="50" id="gJ4-X8-1g8"/>
+                            <constraint firstItem="lF1-IK-utV" firstAttribute="centerX" secondItem="s1a-it-JhU" secondAttribute="centerX" id="pKn-zI-erG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rAC-9S-zDg"/>
                     </view>
