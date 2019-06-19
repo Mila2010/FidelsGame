@@ -8,24 +8,52 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    
+    @IBOutlet weak var SpeedPickerView: UIPickerView!
+    let speedValues = ["low", "medium", "high"]
+    
+    enum SpeedValues: Int {
+        case low = 0, medium = 1, high = 2
+        
+        var value: TimeInterval {
+            switch self {
+            case .low: return 1.5
+            case .medium   : return 1.0
+            case .high  : return 0.5
+            }
+        }
+    }
+    
+    var speedSelected:TimeInterval = SpeedValues.low.value
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        // Do any additional setup after loading the view.
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
     
-
-    @IBOutlet weak var SpeedPickerView: UIPickerView!
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return speedValues[row]
     }
-    */
-
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return speedValues.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        speedSelected = SpeedValues(rawValue: row)?.value ?? speedSelected
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is ViewController
+        {
+            let vc = segue.destination as? ViewController
+            vc?.speed = speedSelected
+        }
+    }
 }
