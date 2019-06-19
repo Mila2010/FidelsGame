@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     func fidelsAnimation(sender: UIButton){
         if(animationIsActive){
-        [UIView.animate(withDuration: 0.5, delay: 0.0, options: [.allowUserInteraction], animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: [.allowUserInteraction], animations: {
             
             let deltaX = CGFloat(Int.random(in: Int(-1 * sender.center.x) ... Int(UIScreen.main.bounds.width -  sender.center.x)))
             let deltaY = CGFloat(Int.random(in: Int(-1 * sender.center.y) ... Int(UIScreen.main.bounds.height - sender.center.y)))
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
             
         }, completion: { _ in
             self.fidelsAnimation(sender: sender)
-        })]
+        })
         }
     }
     
