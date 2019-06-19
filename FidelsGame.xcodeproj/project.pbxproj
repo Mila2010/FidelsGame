@@ -15,6 +15,7 @@
 		C562030122B821AF001FA497 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C56202FF22B821AF001FA497 /* LaunchScreen.storyboard */; };
 		C562030C22B821B0001FA497 /* FidelsGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C562030B22B821B0001FA497 /* FidelsGameTests.swift */; };
 		C562031722B821B0001FA497 /* FidelsGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C562031622B821B0001FA497 /* FidelsGameUITests.swift */; };
+		C562032922BA10BA001FA497 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C562032822BA10BA001FA497 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C562031222B821B0001FA497 /* FidelsGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FidelsGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C562031622B821B0001FA497 /* FidelsGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FidelsGameUITests.swift; sourceTree = "<group>"; };
 		C562031822B821B0001FA497 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C562032822BA10BA001FA497 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				C56202FF22B821AF001FA497 /* LaunchScreen.storyboard */,
 				C562030222B821AF001FA497 /* Info.plist */,
 				C56202FA22B821AF001FA497 /* FidelsGame.xcdatamodeld */,
+				C562032822BA10BA001FA497 /* HomeViewController.swift */,
 			);
 			path = FidelsGame;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				C56202FC22B821AF001FA497 /* FidelsGame.xcdatamodeld in Sources */,
 				C56202F622B821AF001FA497 /* ViewController.swift in Sources */,
 				C56202F422B821AF001FA497 /* AppDelegate.swift in Sources */,
+				C562032922BA10BA001FA497 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
