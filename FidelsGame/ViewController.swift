@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     var animationIsActive = false
+    
+    var speed = 0.0
 
     @IBAction func sayRrrMeow(_ sender: UIButton) {
     print("Fidel says Rrr-Meow!")
@@ -26,7 +28,7 @@ class ViewController: UIViewController {
     
     func fidelsAnimation(sender: UIButton){
         if(animationIsActive){
-        UIView.animate(withDuration: 0.5, delay: 0.0, options: [.allowUserInteraction], animations: {
+        UIView.animate(withDuration: speed, delay: 0.0, options: [.allowUserInteraction], animations: {
             
             let deltaX = CGFloat(Int.random(in: Int(-1 * sender.center.x) ... Int(UIScreen.main.bounds.width -  sender.center.x)))
             let deltaY = CGFloat(Int.random(in: Int(-1 * sender.center.y) ... Int(UIScreen.main.bounds.height - sender.center.y)))
