@@ -13,6 +13,7 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
     
     @IBOutlet weak var SpeedPickerView: UIPickerView!
     let speedValues = ["low", "medium", "high"]
+    
     var speedSelected:TimeInterval = SpeedValues.low.value
     
     enum SpeedValues: Int {
@@ -25,10 +26,6 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
             case .high  : return 0.5
             }
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
