@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Fidel's Game-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FidelsGame" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,13 +24,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="150"/>
                                 <state key="normal" title="😻"/>
                                 <connections>
-                                    <action selector="sayRrrMeow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qPe-Zr-Jc6"/>
+                                    <action selector="sayRrrMeow" destination="BYZ-38-t0r" eventType="touchUpInside" id="RGy-4Q-t7Y"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" button="YES"/>
+                        </accessibility>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Fidel's Game" id="r8U-JP-yRW">
+                        <barButtonItem key="rightBarButtonItem" title="Stop" id="b7S-p3-KZP">
+                            <connections>
+                                <action selector="gameStopStart:" destination="BYZ-38-t0r" id="yX4-i3-iUx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="animationButton" destination="Nrm-1h-NSn" id="XvI-z4-z3e"/>
+                        <outlet property="buttonStopStart" destination="b7S-p3-KZP" id="rod-sM-jqO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="-930.43478260869574" y="146.65178571428569"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="dcB-lD-hNQ">
             <objects>
                 <viewController storyboardIdentifier="homeScreen" id="GUv-aY-RgN" customClass="HomeViewController" customModule="FidelsGame" customModuleProvider="target" sceneMemberID="viewController">
@@ -128,7 +142,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Qc8-2P-7hM"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LCe-11-0Ne"/>
+                    <navigationItem key="navigationItem" title="Home" id="LCe-11-0Ne"/>
                     <connections>
                         <outlet property="SpeedPickerView" destination="o3t-O4-N4z" id="gwq-SF-mQC"/>
                     </connections>
