@@ -10,9 +10,28 @@ import UIKit
 
 class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var selectionView: UIView!
+    
+    override func viewDidLoad(){
+    
+       //selectionView constraints
+       selectionView.translatesAutoresizingMaskIntoConstraints = false
+        selectionView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        selectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 250).isActive = true
+        selectionView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        selectionView.heightAnchor.constraint(equalToConstant: 250).isActive = true
+        
+        //selectionView constraints
+        startButton.translatesAutoresizingMaskIntoConstraints = false
+        startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        startButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100).isActive = true
+         startButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        startButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+    }
     
     @IBOutlet weak var SpeedPickerView: UIPickerView!
-    let speedValues = ["low", "medium", "high"]
+    let speedValues = ["low speed", "medium speed", "high speed"]
     
     var speedSelected:TimeInterval = SpeedValues.low.value
     
