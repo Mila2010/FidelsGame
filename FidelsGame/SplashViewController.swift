@@ -34,7 +34,7 @@ class SplashViewController: UIViewController {
     func navigateToHomeScreen(){
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "homeScreen") as! HomeViewController
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "navigationController") as! UINavigationController
         self.present(newViewController, animated: true, completion: nil)
     }
 }
